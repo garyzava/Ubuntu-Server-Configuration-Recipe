@@ -13,6 +13,7 @@ Basic configuration commands to have your Ubuntu Server up and running on produc
 * [Update And Upgrade](#update-and-upgrade)
 * [Enable Firewall](#enable-firewall)
 * [Install Further Tools](#install-further-tools)
+* [Install Further Applications](#install-further-applications)
 
 <br />
 
@@ -66,3 +67,19 @@ Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-fire
 
 * `sudo timedatectl set-timezone UTC`. Set Timezone UTC/GMT+0
 * `sudo apt-get install net-tools` to install tools for commands like `ifconfig -a` (network interface) and `netstat`
+
+<br />
+
+<hr />
+
+## Install Further Applications
+
+### Angular (and Node.js)
+
+* `curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -`. Download Node.js
+* `sudo apt-get install -y nodejs`. Install Node.js
+* `sudo npm install -g @angular/cli`. Install Angular CLI
+
+Reference: https://github.com/nodesource/distributions/blob/master/README.md
+
+### PostgreSQL
