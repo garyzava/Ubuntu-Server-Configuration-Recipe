@@ -67,6 +67,7 @@ Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-fire
 
 * `sudo timedatectl set-timezone UTC`. Set Timezone UTC/GMT+0
 * `sudo apt-get install net-tools` to install tools for commands like `ifconfig -a` (network interface) and `netstat`
+* `sudo apt install openssh-server`. You should already have this installed so this command won't do anything
 
 <br />
 
