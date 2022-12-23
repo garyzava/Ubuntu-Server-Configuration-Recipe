@@ -90,9 +90,11 @@ Reference: https://github.com/nodesource/distributions/blob/master/README.md
 * `sudo mkdir /opt/oracle` Create a directory for the installation and go to the directory 
 * `sudo wget https://download.oracle.com/otn_software/linux/instantclient/217000/instantclient-basic-linux.x64-21.7.0.0.0dbru.zip` Download Oracle Client files
 * `sudo wget https://download.oracle.com/otn_software/linux/instantclient/217000/instantclient-sqlplus-linux.x64-21.7.0.0.0dbru.zip` Download Oracle SQLPLUS files
+* `sudo wget https://download.oracle.com/otn_software/linux/instantclient/217000/instantclient-sdk-linux.x64-21.7.0.0.0dbru.zip` Download Oracle SDK file. (Optional)
 * `sudo apt-get install unzip` Installing unzip
 * `sudo unzip instantclient-basic-linux.x64-21.7.0.0.0dbru.zip -d /opt/oracle` Unziping client
 * `sudo unzip instantclient-sqlplus-linux.x64-21.7.0.0.0dbru.zip -d /opt/oracle/` Unziping sqlplus
+* `sudo unzip instantclient-sdk-linux.x64-21.7.0.0.0dbru.zip -d /opt/oracle` Unzipping Oracle SDK
 * `nano ~/.profile` Configure SQLPlus
 * `export PATH="$PATH:/opt/oracle/instantclient_21_7"` Copy and paste this line to the end of the file
 * `export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/oracle/instantclient_21_7"` And then copy and paste this line too to the end of the file
