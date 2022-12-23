@@ -83,7 +83,12 @@ Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-fire
 
 Reference: https://github.com/nodesource/distributions/blob/master/README.md
 
-### PostgreSQL
+### PostgreSQL Server (Dev version for extensions)
+* `sudo apt install -y build-essential libaio1` Install the required packages: build-essential & libaio1
+* `sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'` Add the repository that provides PostgreSQL 14 on Ubuntu
+* `wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -` Import the GPG signing key for the repository
+* `sudo apt -y update` Update your APT package list
+* `sudo apt install -y postgresql-14 postgresql-server-dev-14` Installing Postgres 14
 
 ### Oracle Client
 
@@ -99,6 +104,9 @@ Reference: https://github.com/nodesource/distributions/blob/master/README.md
 * `export PATH="$PATH:/opt/oracle/instantclient_21_7"` Copy and paste this line to the end of the file
 * `export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/oracle/instantclient_21_7"` And then copy and paste this line too to the end of the file
 * `source ~/.profile` Execute
+* `sudo sh -c "echo /opt/oracle/instantclient_21_7 > /etc/ld.so.conf.d/oracleinstantclient.conf"` Add Oracle shared libraries to the system's shared library cache
+* `sudo ldconfig` Indexing the library cache
+* `export ORACLE_HOME=/opt/oracle/instantclient_21_7` Set ORACLE_HOME as /opt/oracle/instantclient_21_7
 * `sqlplus [USER]/[PASSWORD]@[IP:PORT]/[SERVICE_NAME]` Test the connection to Oracle
 
 Reference: https://manjaro.site/how-to-install-oracle-instant-client-on-ubuntu-20-04/
