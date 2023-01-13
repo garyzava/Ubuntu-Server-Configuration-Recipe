@@ -104,7 +104,7 @@ Reference: https://github.com/nodesource/distributions/blob/master/README.md
 * `export PATH="$PATH:/opt/oracle/instantclient_21_7"` Copy and paste this line to the end of the file
 * `export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/oracle/instantclient_21_7"` And then copy and paste this line too to the end of the file
 * `source ~/.profile` Execute
-* `sudo sh -c "echo /opt/oracle/instantclient_21_7 > /etc/ld.so.conf.d/oracleinstantclient.conf"` Add Oracle shared libraries to the system's shared library cache
+* `sudo sh -c "echo /opt/oracle/instantclient_21_7 > /etc/ld.so.conf.d/oracle-instantclient.conf"` Add Oracle shared libraries to the system's shared library cache
 * `sudo ldconfig` Indexing the library cache
 * `export ORACLE_HOME=/opt/oracle/instantclient_21_7` Set ORACLE_HOME as /opt/oracle/instantclient_21_7
 * `sqlplus [USER]/[PASSWORD]@[IP:PORT]/[SERVICE_NAME]` Test the connection to Oracle
