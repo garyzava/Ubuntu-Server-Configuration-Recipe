@@ -14,6 +14,7 @@ Basic configuration commands to have your Ubuntu Server up and running on produc
 * [Enable Firewall](#enable-firewall)
 * [Install Further Tools](#install-further-tools)
 * [Install Further Applications](#install-further-applications)
+* [Update The Operating System](#update-the-operating-system)
 
 <br />
 
@@ -108,5 +109,15 @@ Reference: https://github.com/nodesource/distributions/blob/master/README.md
 * `sudo ldconfig` Indexing the library cache
 * `export ORACLE_HOME=/opt/oracle/instantclient_21_7` Set ORACLE_HOME as /opt/oracle/instantclient_21_7
 * `sqlplus [USER]/[PASSWORD]@[IP:PORT]/[SERVICE_NAME]` Test the connection to Oracle
+
+## Update the Operating System
+
+* `sudo apt update` Access the package servers and check to see if any of your installed packages have new versions available. 
+* `sudo apt dist-upgrade` Install the updates. This will show you the list of packages that are about to be updated, and if the total installation size is large enough, it will show you the size and prompt you to confirm that you accept.
+* `y` Ensure that you have enough space available to do this, then press y and Enter to begin the update process.
+* `sudo apt autoremove` Clean up any old versions of packages that were just replaced
+* `cat /var/run/reboot-required` Check if your system needs to be rebooted. If the command prints `No such file or directory`, then reboot is not required and you can skip the step below. However if the command prints `*** System restart required ***`, then you should restart your machine to finish applying the updates when you are able: `sudo reboot`
+
+
 
 Reference: https://manjaro.site/how-to-install-oracle-instant-client-on-ubuntu-20-04/
