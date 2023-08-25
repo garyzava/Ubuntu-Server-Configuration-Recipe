@@ -116,7 +116,7 @@ Reference: https://github.com/nodesource/distributions/blob/master/README.md
 * `sudo apt dist-upgrade` Install the updates. This will show you the list of packages that are about to be updated, and if the total installation size is large enough, it will show you the size and prompt you to confirm that you accept.
 * `y` Ensure that you have enough space available to do this, then press y and Enter to begin the update process.
 * `sudo apt autoremove` Clean up any old versions of packages that were just replaced
-* `cat /var/run/reboot-required` Check if your system needs to be rebooted. If the command prints `No such file or directory`, then reboot is not required and you can skip the step below. However if the command prints `*** System restart required ***`, then you should restart your machine to finish applying the updates when you are able: `sudo reboot`
+* `cat /var/run/reboot-required` Check if your system needs to be rebooted. If the command prints `No such file or directory`, then reboot is not required and you can skip the reboot. However if the command prints `*** System restart required ***`, then you should restart your machine to finish applying the updates when you are able: `sudo reboot`
 
 
 
